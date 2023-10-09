@@ -12,14 +12,20 @@
         <form id="bill-form">
             <label for="last-reading">Last Bill Meter Reading (kWh):</label>
             <input type="number" id="last-reading" required>
-            <label for="current-reading">Current Meter Reading (value on front of unit) (kWh):</label>
+            <label for="current-reading">Current Meter Reading (kWh):</label>
             <input type="number" id="current-reading" required>
-            <label for="unit-rate">Unit Rate current rate is £0.2501 but adjust if needed:</label>
+            <label for="unit-rate">Unit Rate (e.g., 0.2501):</label>
             <input type="number" id="unit-rate" step="0.0001" value="0.2501" required>
+            <label for="last-bill-date">Last Bill Date:</label>
+            <input type="date" id="last-bill-date">
+            <label for="admin-charge-rate">Admin Charge Rate (default 0.29588):</label>
+            <input type="number" id="admin-charge-rate" step="0.0001" value="0.29588">
             <button type="button" id="calculate-btn">Calculate</button>
         </form>
         <div id="result" class="hidden">
-            <h2>Your current bill amount is: <span id="bill-amount"></span></h2>
+            <h2>Unit Rate Bill Amount: <span id="unit-rate-bill-amount"></span></h2>
+            <h2>Admin Charge So Far: <span id="admin-charge-so-far"></span></h2>
+            <h2>Total Bill: <span id="total-bill"></span></h2>
         </div>
     </div>
     <script src="script.js"></script>
