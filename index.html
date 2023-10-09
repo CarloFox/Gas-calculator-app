@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIU Bill Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>HIU Bill Calculator</h1>
+        <form id="bill-form">
+            <label for="last-reading">Last Bill Meter Reading (kWh):</label>
+            <input type="number" id="last-reading" required>
+            <button type="button" id="next-btn">Next</button>
+        </form>
+        <div id="result" class="hidden">
+            <label for="current-reading">Current Meter Reading (Number on Front of unit) (kWh):</label>
+            <input type="number" id="current-reading" required>
+            <label for="unit-rate">Unit Rate (current is £0.2501 but change if required):</label>
+            <input type="number" id="unit-rate" step="0.0001" value="0.2501" required>
+            <button type="button" id="calculate-btn">Calculate</button>
+            <h2>Your current bill amount will be: <span id="bill-amount"></span></h2>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
